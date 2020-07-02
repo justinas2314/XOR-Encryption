@@ -7,8 +7,7 @@ The XOR operator is applied to every byte in a file. Which looks something like 
 `10010010`  
     ==  
 `11111001`  
-so 107 XOR 146 = 249 or  
-`107 ^ 146 == 249`  
+so `107 ^ 146 == 249`  
 Also  
 a XOR b = c;  
 c XOR b = a;  
