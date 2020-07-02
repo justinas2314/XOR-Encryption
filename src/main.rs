@@ -75,8 +75,11 @@ fn encrypt(vector: Vec<u8>, password: &str) -> Vec<u8> {
 
 
 fn main() {
+    // -m moves the files back after encrypting them
+    // and also deletes the output directory
+    // -d deletes the files in the input directory
     let args:Vec<String> = std::env::args().collect();
-    let sdir = args.get(1).expect("starting directory not specified");
+    let sdir = args.get(1).expect("input directory not specified");
     let odir = args.get(2).expect("output directory not specified");
     if sdir == odir {
         println!("cannon use the same directory");
@@ -87,7 +90,7 @@ fn main() {
         Some(x)  => x as &str,
         _ => ""
     };
-    let overwrite = if del_str.contains("-o") {true} else {false};
+    let overwrite = if del_str.contains("-m") {true} else {false};
     let del = if del_str.contains("-d") {true} else {false};
     encode(&sdir, &odir, &pw);
     if del {
