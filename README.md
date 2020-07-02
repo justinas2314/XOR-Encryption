@@ -13,7 +13,10 @@ Also
 `c ^ b == a`  
 Therefore `(a ^ b) ^ b == a`  
 Every operation can be reversed with the same key/password. Here the input file (a) will get encrypted with the key (b) and the result will be the same directory but encrypted (c).
-If c gets encrypted with b then the output will always be a.
+If c gets encrypted with b then the output will always be a.  
+You can also encrypt the same directory with multiple keys as  
+`(((a ^ b) ^ c) ^ b) ^ c == a`  
+The longer the key and the more keys you use the safer the will be encryption.
 # Usage
 This is a Command Line Interface Application.
 It takes 3 or 4 arguments.  
