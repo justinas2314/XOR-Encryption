@@ -16,7 +16,7 @@ Every operation can be reversed with the same key/password. Here the input file 
 If c gets encrypted with b then the output will always be a.
 # Usage
 This is a Command Line Interface Application.
-It takes 3 or 4 arguments.
+It takes 3 or 4 arguments.  
 `C:\directory\with\xor_encryption.exe "C:\input\directory" "C:\output\directory" "key" [-m/-d]`  
 `-m` will encrypt on the spot. The encoded files will only be moved to the output directory temporarily and the encoded files will later be moved to the input directory. 
 The temporary output directory will be deleted.  
