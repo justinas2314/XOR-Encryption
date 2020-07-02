@@ -21,4 +21,4 @@ It takes 3 or 4 arguments.
 `-m` will encrypt on the spot. The encoded files will only be moved to the output directory temporarily and the encoded files will later be moved to the input directory. 
 The temporary output directory will be deleted.  
 `-d` will keep the encrypted files in the output directory and will delete everything in the input directory.  
-` ` if left as blank nothing will be deleted.  
+` `  if left as blank nothing will be deleted.  
