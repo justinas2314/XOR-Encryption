@@ -16,7 +16,7 @@ Every operation can be reversed with the same key/password. Here the input file 
 If c gets encrypted with b then the output will always be a.  
 You can also encrypt the same directory with multiple keys as  
 `a ^ b ^ c ^ b ^ c == a`  
-The longer the key and the more keys you use the safer the will be encryption.
+The longer the key and the more keys you use the safer the encryption will be.
 # Usage
 This is a Command Line Interface Application.
 It takes 3 or 4 arguments.  
