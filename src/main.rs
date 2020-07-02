@@ -58,6 +58,9 @@ fn get_files(start_dir: &str) -> Vec<(String, String)> {
 
 
 fn encrypt(vector: Vec<u8>, password: &str) -> Vec<u8> {
+    if password.len() == 0 {
+        return vector;
+    }
     let mut output = Vec::new();
     for (i, j) in vector.iter().enumerate() {
         let index = i % password.len();
@@ -75,14 +78,23 @@ fn main() {
     let args:Vec<String> = std::env::args().collect();
     let sdir = args.get(1).expect("starting directory not specified");
     let odir = args.get(2).expect("output directory not specified");
+    if sdir == odir {
+        println!("cannon use the same directory");
+        panic!();
+    }
     let pw = args.get(3).expect("password not specified");
     let del_str = match args.get(4) {
         Some(x)  => x as &str,
         _ => ""
     };
-    let del = if del_str.contains("del") {true} else {false};
+    let overwrite = if del_str.contains("-o") {true} else {false};
+    let del = if del_str.contains("-d") {true} else {false};
     encode(&sdir, &odir, &pw);
     if del {
         let _ = std::fs::remove_dir_all(sdir);
+    } else if overwrite {
+        let _ = std::fs::remove_dir_all(sdir);
+        encode(&odir, &sdir, "");
+        let _ = std::fs::remove_dir_all(odir);
     }
 }
