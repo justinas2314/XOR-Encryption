@@ -21,6 +21,6 @@ The longer the key and the more keys you use the safer the encryption will be.
 This is a Command Line Interface Application.
 It takes 3 or 4 arguments.  
 `C:\directory\with\xor_encryption.exe "C:\input\directory" "C:\output\directory" "key" [-m/-d]`  
-`-m` will encrypt on the spot. The encoded files will later be *moved* to the input directory and the temporary output directory will be deleted.  
-`-d` will keep the encrypted files in the output directory and will *delete* everything in the input directory.  
+`-m` will encrypt on the spot. The encoded files will later be **moved** to the input directory and the temporary output directory will be deleted.  
+`-d` will keep the encrypted files in the output directory and will **delete** everything in the input directory.  
 ` ` if left as blank nothing will be deleted.  
