@@ -19,8 +19,9 @@ You can also encrypt the same directory with multiple keys as
 The longer the key and the more keys you use the safer the encryption will be.
 # Usage
 This is a Command Line Interface Application.
-It takes 3 or 4 arguments.  
-`C:\directory\with\xor_encryption.exe "C:\input\directory" "C:\output\directory" "key" [-m/-d]`  
-`-m` will encrypt on the spot. The encoded files will later be **moved** to the input directory and the temporary output directory will be deleted.  
-`-d` will keep the encrypted files in the output directory and will **delete** everything in the input directory.  
-` ` if left as blank nothing will be deleted.  
+It takes 2 or 3.  
+`/directory/with/compiled/xor_encryption "/input/directory" "key" ["/output/directory"]`  
+if the output directory is not specified  
+   it will encrypt the input file/directory in place  
+otherwise  
+   the input file will not change and an encrypted file will be generated inside the output directory
