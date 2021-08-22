@@ -21,7 +21,9 @@ The longer the key and the more keys you use the safer the encryption will be.
 This is a Command Line Interface Application.
 It takes 2 or 3.  
 `/directory/with/compiled/xor_encryption "/input/directory" "key" ["/output/directory"]`  
+
 if the output directory is not specified  
 * it will encrypt the input file/directory in place  
+
 otherwise  
 * the input file will not change and an encrypted file will be generated inside the output directory
