@@ -19,7 +19,7 @@ You can also encrypt the same directory with multiple keys as
 The longer the key and the more keys you use the safer the encryption will be.
 # Usage
 This is a Command Line Interface Application.
-It takes 2 or 3.  
+It takes 2 or 3 arguments.  
 `/directory/with/compiled/xor_encryption "/input/directory" "key" ["/output/directory"]`  
 
 if the output directory is not specified  
